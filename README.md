@@ -27,17 +27,13 @@ The aim is to demonstrate how SQL can be used to prepare analysis-ready data, an
    - Added Primary & Foreign Keys
 
 2. **Schema design**
-   - Customers Table – CustomerID, CustomerName, Segment, Country, Region, City, State
-   - Products Table – ProductID, ProductName, Category, SubCategory
-   - Orders Table – OrderID, OrderDate, ShipDate, ShipMode, CustomerID, ProductID, Quantity, Sales, Profit, Discount
+   - **Customers** – CustomerID, CustomerName, Segment, Country, Region, City, State
+   - **Products** – ProductID, ProductName, Category, SubCategory
+   - **Orders** – OrderID, OrderDate, ShipDate, ShipMode, CustomerID
+   - **OrderDetails** - OrderID, ProductID, Quantity, Discount, Sales, Profit
 
-Relationships:
 
-Orders.CustomerID → Customers.CustomerID (1-to-many)
-
-Orders.ProductID → Products.ProductID (1-to-many)
-
-2. **Analysis in SQL**
+3. **Analysis in SQL**
    - Wrote KPI queries for:
      - Total Sales, Total Profit, Profit Margin
      - Sales/Profit by Region, Category
@@ -45,12 +41,8 @@ Orders.ProductID → Products.ProductID (1-to-many)
      - Orders by Ship Mode
      -  for monthly trend & repeat customers etc.
 
-3. **Visualization in Excel**
+4. **Visualization in Excel**
    - Imported SQL query results into Excel
-   - Built KPI cards and charts:
-       - Bar charts for Region, Products, Customers
-       - Column chart for Profit by Category
-       - Pie chart for Ship Mode
    - Designed a clean dashboard layout
 
 ---
