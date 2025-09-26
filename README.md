@@ -26,6 +26,17 @@ The aim is to demonstrate how SQL can be used to prepare analysis-ready data, an
    - Normalized into 3 tables: `Customers`, `Products`, `Orders`
    - Added Primary & Foreign Keys
 
+2. **Schema design**
+   - Customers Table – CustomerID, CustomerName, Segment, Country, Region, City, State
+   - Products Table – ProductID, ProductName, Category, SubCategory
+   - Orders Table – OrderID, OrderDate, ShipDate, ShipMode, CustomerID, ProductID, Quantity, Sales, Profit, Discount
+
+Relationships:
+
+Orders.CustomerID → Customers.CustomerID (1-to-many)
+
+Orders.ProductID → Products.ProductID (1-to-many)
+
 2. **Analysis in SQL**
    - Wrote KPI queries for:
      - Total Sales, Total Profit, Profit Margin
@@ -63,5 +74,9 @@ The aim is to demonstrate how SQL can be used to prepare analysis-ready data, an
 - **Standard Class shipping** handles ~60 % of orders  
 - South and East show opportunities for growth compared to West  
 
----
+## Files in this repo
+- SQL raw data cleaning script
+- SQL schema designing script (table creation)
+- SQL query scripts for KPI requirements
+- Superstore raw data file
 
