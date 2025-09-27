@@ -23,7 +23,7 @@ The aim is to demonstrate how SQL can be used to prepare analysis-ready data, an
 ##  Workflow
 1. **Data Import & Cleaning in SQL**
    - Removed duplicates, fixed data-types
-   - Normalized into 3 tables: `Customers`, `Products`, `Orders`
+   - Normalized into 4 tables: `Customers`, `Products`, `Orders`, 'OrderDetails'
    - Added Primary & Foreign Keys
 
 2. **Schema design**
